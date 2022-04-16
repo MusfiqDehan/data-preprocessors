@@ -7,6 +7,20 @@ authors = ["Md. Musfiqur Rahaman <musfiqur.rahaman@northsouth.edu>"]
 readme = "README.rst"
 homepage = "https://github.com/MusfiqDehan/data-preprocessors"
 repository = "https://github.com/MusfiqDehan/data-preprocessors"
+keywords = ["nlp", "data-preprocessors", "data-preprocessing", "text-preprocessing", "data-science"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Education",
+    "Topic :: Software Development",
+    "Topic :: Communications",
+    "Topic :: Text Preprocessing",
+    "Topic :: Text Processing :: Linguistic",
+    "Operating System :: OS Independent"]
+packages = [{include="data_preprocessors"}]
 
 
 [tool.poetry.dependencies]
