@@ -1,4 +1,4 @@
-from data_preprocessor import __version__
+from data_preprocessors import __version__
 
 
 def test_version():

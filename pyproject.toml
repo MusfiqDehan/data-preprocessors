@@ -1,8 +1,13 @@
 [tool.poetry]
 name = "data-preprocessors"
 version = "0.1.0"
-description = ""
+description = "An easy to use tool for Data Preprocessing specially for Text Preprocessing"
+license = "MIT"
 authors = ["Md. Musfiqur Rahaman <musfiqur.rahaman@northsouth.edu>"]
+readme = "README.rst"
+homepage = "https://github.com/MusfiqDehan/data-preprocessors"
+repository = "https://github.com/MusfiqDehan/data-preprocessors"
+
 
 [tool.poetry.dependencies]
 python = "^3.8"
