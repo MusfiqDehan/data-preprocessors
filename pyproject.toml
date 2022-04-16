@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "data-preprocessor"
+name = "data-preprocessors"
 version = "0.1.0"
 description = ""
 authors = ["Md. Musfiqur Rahaman <musfiqur.rahaman@northsouth.edu>"]
