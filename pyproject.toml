@@ -17,7 +17,7 @@ classifiers = [
     "Topic :: Education",
     "Topic :: Software Development",
     "Topic :: Communications",
-    "Topic :: Text Preprocessing",
+    "Topic :: Text Processing",
     "Topic :: Text Processing :: Linguistic",
     "Operating System :: OS Independent"]
 packages = [{include="data_preprocessors"}]
