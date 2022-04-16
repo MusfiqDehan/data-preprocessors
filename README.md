@@ -1,12 +1,12 @@
 # Data-Preprocessor
-Preprocess your data before training a model.
+An easy to use tool for Data Preprocessing specially for Text Preprocessing
 
 ## Installation
-Install the stable release
-For windows
+Install the stable release<br>
+For windows<br>
 `$ pip install -U data-preprocessors`
 
-For Linux/WSL2
+For Linux/WSL2<br>
 `$ pip3 install -U data-preprocessors`
 
 ## Quick Start
