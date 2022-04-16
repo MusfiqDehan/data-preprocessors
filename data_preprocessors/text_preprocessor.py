@@ -48,6 +48,13 @@ def convert_lower_case(sentence):
 
 
 # ======================================
+# Convert to upper case
+# ======================================
+def convert_upper_case(sentence):
+    return sentence.upper()
+
+
+# ======================================
 # Decontracting words
 # ======================================
 def decontracting_words(sentence):
