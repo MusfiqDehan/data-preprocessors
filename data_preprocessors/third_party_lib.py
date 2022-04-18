@@ -26,11 +26,10 @@ def get_correct_spelling(sentence: str) -> str:
     correct_spelling = TextBlob(sentence).correct()
     return correct_spelling
 
+
 # ========================================
 # Get Words Tags Dictionary
 # ========================================
-
-
 def get_nltk_postag_dict(target=""):
     ''' Get nltk pos tags '''
     target_tokenized = nltk.tokenize.word_tokenize(target)
