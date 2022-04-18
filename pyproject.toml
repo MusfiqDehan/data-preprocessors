@@ -25,6 +25,10 @@ packages = [{include="data_preprocessors"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+spacy = "^3.2.4"
+flair = "^0.11.1"
+nltk = "^3.7"
+deep-translator = "^1.8.3"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
