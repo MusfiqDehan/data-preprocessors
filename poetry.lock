@@ -970,6 +970,17 @@ python-versions = "*"
 widechars = ["wcwidth"]
 
 [[package]]
+name = "textblob"
+version = "0.17.1"
+description = "Simple, Pythonic text processing. Sentiment analysis, part-of-speech tagging, noun phrase parsing, and more."
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+nltk = {version = ">=3.1", markers = "python_version >= \"3\""}
+
+[[package]]
 name = "thinc"
 version = "8.0.15"
 description = "A refreshing functional take on deep learning, compatible with your favorite libraries"
@@ -1212,7 +1223,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "f64d87063764e323c612a4a33738200ddda8841c356a73e81efc2dfefb915d95"
+content-hash = "28c0ef4d582b4f87fbbc6d9da2809b69f311c09378d77f2a57f93b167bc10d33"
 
 [metadata.files]
 atomicwrites = [
@@ -2040,6 +2051,10 @@ srsly = [
 tabulate = [
     {file = "tabulate-0.8.9-py3-none-any.whl", hash = "sha256:d7c013fe7abbc5e491394e10fa845f8f32fe54f8dc60c6622c6cf482d25d47e4"},
     {file = "tabulate-0.8.9.tar.gz", hash = "sha256:eb1d13f25760052e8931f2ef80aaf6045a6cceb47514db8beab24cded16f13a7"},
+]
+textblob = [
+    {file = "textblob-0.17.1-py2.py3-none-any.whl", hash = "sha256:15546d7f309e96a3f542bee42751c8e5ce4d519d3d274ee79df2318141f0b788"},
+    {file = "textblob-0.17.1.tar.gz", hash = "sha256:8dc0875dfab1eaf0dc772a9dbc4afaa9ca93d0e35cd62cb792f3a38e067ab68f"},
 ]
 thinc = [
     {file = "thinc-8.0.15-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:0368c0b279492c0ed0b5b1bc79614e8a335ae1ccc3b1617de46f04eb74dc9a43"},

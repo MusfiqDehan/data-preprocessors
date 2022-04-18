@@ -3,6 +3,7 @@ import spacy
 from flair.data import Sentence
 from flair.models import SequenceTagger
 from deep_translator import GoogleTranslator
+from textblob import TextBlob
 
 
 # =================================
@@ -16,9 +17,20 @@ def words_to_tags(sentence):
     return tags_str
 
 
+def get_correct_spelling(sentence: str) -> str:
+    '''
+    Get correct spelling of a sentence.\n
+    At first install dependencies \n
+    `!pip install -U textblob`
+    '''
+    correct_spelling = TextBlob(sentence).correct()
+    return correct_spelling
+
 # ========================================
 # Get Words Tags Dictionary
 # ========================================
+
+
 def get_nltk_postag_dict(target=""):
     ''' Get nltk pos tags '''
     target_tokenized = nltk.tokenize.word_tokenize(target)
