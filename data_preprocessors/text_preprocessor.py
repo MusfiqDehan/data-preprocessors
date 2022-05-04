@@ -1,3 +1,7 @@
+"""
+A module for preprocessing textfiles
+"""
+
 import pandas as pd
 import random
 import re
@@ -43,14 +47,14 @@ def parallel_corpus_builder(src_file="", tgt_file="", separator="", src_tgt_file
 # ======================================
 # Convert to lower case
 # ======================================
-def convert_lower_case(sentence):
+def convert2lower(sentence):
     return sentence.lower()
 
 
 # ======================================
 # Convert to upper case
 # ======================================
-def convert_upper_case(sentence):
+def convert2upper(sentence):
     return sentence.upper()
 
 
@@ -214,7 +218,7 @@ def remove_file(file_path=""):
 # ======================================
 # Convert a text file into a dataframe
 # ======================================
-def text_file_to_dataframe(myfile_path="", mydataframe=pd.DataFrame()) -> pd.DataFrame:
+def text2df(myfile_path="", mydataframe=pd.DataFrame()) -> pd.DataFrame:
     with open(myfile_path, "r") as myfile:
         mydataframe = pd.read_csv(myfile_path, sep="\n", header=None)
     return mydataframe
@@ -236,15 +240,53 @@ def split_bangla_sentence(file_path=""):
 
 
 # ======================================
-# Split Bangla and English Sentence
+# Split Bangla Paragraph
 # ======================================
-def split_bangla_paragraph(file_path=""):
+def split_bangla_paragraph(file_path="", modified_file_path=""):
     """
-    This function split a bangla paragraph into sentences
+    This function split a English paragraph into sentences
     """
     with open(file_path, "r") as fp:
         for paragraph in fp:
             paragraph = paragraph.split("।")
+            # for line in paragraph:
+            #     yield line
+
+    # Converting list to text file
+    with open(modified_file_path, "w") as new_file:
+        for listitem in paragraph:
+            new_file.write("%s\n" % listitem)
+
+
+# ======================================
+# Split English Paragraph
+# ======================================
+def split_paragraph(file_path="", modified_file_path=""):
+    """
+    This function split a English paragraph into sentences
+    """
+    with open(file_path, "r") as fp:
+        for paragraph in fp:
+            paragraph = paragraph.split(".")
+            # for line in paragraph:
+            #     yield line
+
+    # Converting list to text file
+    with open(modified_file_path, "w") as new_file:
+        for listitem in paragraph:
+            new_file.write("%s\n" % listitem)
+
+
+# ======================================
+# Split English Paragraph 2
+# ======================================
+def split_paragraph2(file_path=""):
+    """
+    This function split a English paragraph into sentences
+    """
+    with open(file_path, "r") as fp:
+        for paragraph in fp:
+            paragraph = paragraph.split(".")
             for line in paragraph:
                 yield line
 
@@ -252,16 +294,11 @@ def split_bangla_paragraph(file_path=""):
 # =====================================================
 # Copying desired lines from a text file and storing in a new text file
 # =====================================================
-
-
-def separate_lines_from_text_file(
+def separate_lines(
     old_file_path="", new_file_path="", start_line=0, end_line=0
 ):
     """
-    old_file_path = "Datasets/train/train-bn-en.txt"
-    new_file_path = "Datasets/train/train-bn-en-50.txt"
-    start_line = 0  # include
-    end_line = 50   # exclude
+    Copying desired lines from a text file and storing in a new text file
     """
     # Converting text file to list
     with open(old_file_path, "r") as old_file:
@@ -279,15 +316,74 @@ def separate_lines_from_text_file(
 # ===================================
 # Count no of lines in a text file
 # ===================================
-def no_of_lines_in_text_file(file_path=""):
+def count_lines(file_path=""):
     """
-    This function count no of lines in a text file
-    path = "Datasets/train/train-bn-en.txt"
+    Count total 
+    no of lines in a text file
     """
     with open(file_path, "r") as fp:
         for count, line in enumerate(fp):
             pass
     return count + 1
+
+
+# =====================================================
+# Split a text file into train, validation and test set
+# =====================================================
+def split_textfile(
+    main_file_path: str = "",
+    train_file_path: str = "",
+    val_file_path: str = "",
+    test_file_path: str = "",
+    train_size: float = 0.8,
+    val_size: float = 0.1,
+    test_size: float = 0.1,
+    shuffle: bool = False,
+    seed: int = 42,
+):
+    """
+    Split a text file into train, validation and test set
+    """
+    start_line = 0
+    end_line = count_lines(file_path=main_file_path)
+
+    train_start_line = start_line
+    train_end_line = int((end_line * train_size))
+
+    val_start_line = train_end_line
+    val_end_line = int((end_line * val_size)) + 1
+
+    test_start_line = val_end_line
+    test_end_line = int((end_line * test_size)) + 1
+
+    # Converting text file to list
+    with open(main_file_path, "r") as main_file:
+        main_data = [line.rstrip("\n") for line in main_file.readlines()]
+
+        # Separating desired lines from list
+        train_data = main_data[train_start_line: train_end_line]
+        val_data = main_data[val_start_line: val_end_line]
+        test_data = main_data[test_start_line: test_end_line]
+
+        # Shuffling data
+        if shuffle == True:
+            random.seed(seed)
+            random.shuffle(train_data)
+            random.shuffle(val_data)
+            random.shuffle(test_data)
+
+    # Converting list to text file
+    with open(train_file_path, "w") as train_file:
+        for listitem in train_data:
+            train_file.write("%s\n" % listitem)
+
+    with open(val_file_path, "w") as val_file:
+        for listitem in val_data:
+            val_file.write("%s\n" % listitem)
+
+    with open(test_file_path, "w") as test_file:
+        for listitem in test_data:
+            test_file.write("%s\n" % listitem)
 
 
 # =================================================
@@ -368,7 +464,7 @@ def with_and_remove_punc(line):
 # =================================
 # Convert a text file into a list
 # =================================
-def text_file_to_list(myfile_path="", mylist=[]):
+def text2list(myfile_path="", mylist=[]):
     with open(myfile_path, "r") as myfile:
         mylist = [line.rstrip("\n") for line in myfile.readlines()]
     return mylist
@@ -377,10 +473,9 @@ def text_file_to_list(myfile_path="", mylist=[]):
 # =================================
 # Convert a text file into a csv file
 # =================================
-def text_to_csv(text_file_path="", csv_file_path=""):
+def text2csv(text_file_path="", csv_file_path=""):
     """
-    text_file_path = "Datasets/train/train-bn-en.txt"
-    csv_file_path = "Datasets/train/train-bn-en.csv"
+    Convert a text file into a csv file
     """
     # Converting text file to list
     with open(text_file_path, "r") as myfile:
@@ -394,8 +489,7 @@ def text_to_csv(text_file_path="", csv_file_path=""):
 
 def text_to_csv_with_header(text_file_path="", csv_file_path=""):
     """
-    text_file_path = "Datasets/train/train-bn-en.txt"
-    csv_file_path = "Datasets/train/train-bn-en.csv"
+    Convert a text file into a csv file with header/column names
     """
     # Converting text file to list
     with open(text_file_path, "r") as myfile:
@@ -426,7 +520,10 @@ def text_to_csv_with_header2(text_file_path="", csv_file_path="", delimeter='\n'
 # =================================
 # Convert a list into a text file
 # =================================
-def list_to_text_file(mylist=[], myfile_path=""):
+def list2text(mylist=None, myfile_path=""):
+    if mylist is None:
+        mylist = []
+
     with open(myfile_path, "w") as myfile:
         for item in mylist:
             myfile.write(item + "\n")
@@ -435,33 +532,53 @@ def list_to_text_file(mylist=[], myfile_path=""):
 # =============================
 # Shuffle a text file's lines
 # =============================
-def shuffle_textfile_lines(old_file="", shuffled_file="", seed=0):
+def shuffle_lines(old_file="", shuffled_file="", seed=0):
+    """
+    Shuffle a text file's lines
+    """
+    # Reading lines from text file
+    with open(old_file, "r") as old_file:
+        lines = old_file.readlines()
+
+    # Shuffling lines
     random.seed(seed)
-    lines = open(old_file, "r").readlines()
     random.shuffle(lines)
-    open(shuffled_file, "w").writelines(lines)
+
+    # Writing lines to text file
+    with open(shuffled_file, "w") as shuffled_file:
+        for line in lines:
+            shuffled_file.write(line)
 
 
 # ========================================
 # Merge multiple text files into one
 # ========================================
-def merge_text_files(folder_path="", combined_file_path=""):
+def merge_textfiles(folder_path="", combined_file_path=""):
+    """
+    Merge multiple text files into one
+    """
+    # List of files to be merged
+    file_list = os.listdir(folder_path)
 
-    file_list = glob.glob(folder_path + "*.txt")
-
-    with open(combined_file_path, "w") as file:
-        input_lines = fileinput.input(file_list)
-        file.writelines(input_lines)
+    # Merging files
+    with open(combined_file_path, "w") as combined_file:
+        for file in file_list:
+            with open(folder_path + file, "r") as myfile:
+                combined_file.write(myfile.read())
 
 
 # ========================================
 # Count total characters in a sentence
 # ========================================
 def count_chars(sentence):
-    total = 0
-    for ch in sentence:
-        total += 1
-    return total
+    """
+    Count total characters in a sentence
+    """
+    return len(sentence)
+    # total = 0
+    # for ch in sentence:
+    #     total += 1
+    # return total
 
 
 # ========================================
@@ -474,15 +591,12 @@ def empty_function(no_args):
 # =========================================
 # Apply a function in whole text file
 # =========================================
-def apply_function_in_whole_text_file(
+def apply_whole(
     function_name, myfile_path="", modified_file_path=""
 ):
-    mylist = text_file_to_list(myfile_path=myfile_path, mylist=[])
+    mylist = text2list(myfile_path=myfile_path, mylist=[])
 
     # mylist = [function_name(item) for item in mylist]
     newlist = list(map(function_name, mylist))
 
-    list_to_text_file(mylist=newlist, myfile_path=modified_file_path)
-
-
-# . venv/bin/activate
+    list2text(mylist=newlist, myfile_path=modified_file_path)

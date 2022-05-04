@@ -1,3 +1,8 @@
+"""
+A module for preprocessing lists.
+"""
+
+
 def delete_duplicates(list):
     """
     Delete duplicates from a list.
