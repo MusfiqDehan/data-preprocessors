@@ -385,6 +385,11 @@ def split_textfile(
         for listitem in test_data:
             test_file.write("%s\n" % listitem)
 
+    print("Total lines: ", len(main_data))
+    print("Train set size: ", len(train_data))
+    print("Validation set size: ", len(val_data))
+    print("Test set size: ", len(test_data))
+
 
 # =================================================
 # Add a space before and after a punctuation mark
