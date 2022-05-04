@@ -345,16 +345,16 @@ def split_textfile(
     Split a text file into train, validation and test set
     """
     start_line = 0
-    end_line = count_lines(file_path=main_file_path)
+    total_line = count_lines(file_path=main_file_path)
 
     train_start_line = start_line
-    train_end_line = int((end_line * train_size))
+    train_end_line = int((total_line * train_size) + train_start_line)
 
     val_start_line = train_end_line
-    val_end_line = int((end_line * val_size)) + 1
+    val_end_line = int((total_line * val_size) + val_start_line)
 
     test_start_line = val_end_line
-    test_end_line = int((end_line * test_size)) + 1
+    test_end_line = int((total_line * test_size) + test_start_line)
 
     # Converting text file to list
     with open(main_file_path, "r") as main_file:
