@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="branding/logo.png">
+    <img src="https://github.com/MusfiqDehan/data-preprocessors/raw/master/branding/logo.png">
 </h1>
 
 <p align="center">
