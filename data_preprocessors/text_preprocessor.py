@@ -396,8 +396,6 @@ def split_textfile(
 # =================================================
 def space_punc(line):
     """
-    SPACE PUNC
-    ----------
     Add a space before and after a punctuation mark
     and remove more than one space
     print(space_punc('bla. bla? "bla"bla.bla! bla...'))
