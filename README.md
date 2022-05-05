@@ -6,6 +6,11 @@
     An easy to use tool for Data Preprocessing specially for Text Preprocessing
 </p>
 
+## Table of Contents
+- [Installation](https://github.com/MusfiqDehan/data-preprocessors#installation)
+- [Quick Start](https://github.com/MusfiqDehan/data-preprocessors#quick-start)
+
+
 ## **Installation**
 Install the latest stable release<br>
 **For windows**<br>
