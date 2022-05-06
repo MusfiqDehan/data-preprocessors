@@ -10,6 +10,9 @@ import os
 import fileinput
 import glob
 
+import nltk
+nltk.download("punkt")
+
 
 # ======================================
 # Creating corpus on given format
@@ -225,40 +228,6 @@ def text2df(myfile_path="", mydataframe=pd.DataFrame()) -> pd.DataFrame:
 
 
 # ======================================
-# Convert a text file into a list
-# ======================================
-def split_bangla_sentence(file_path=""):
-    """
-    This function split a bangla sentence into words
-    """
-    with open(file_path, "r") as fp:
-        for line in fp:
-            line = line.rstrip("\n")
-            line = line.split(" ")
-            for word in line:
-                yield word
-
-
-# ======================================
-# Split Bangla Paragraph
-# ======================================
-def split_bangla_paragraph(file_path="", modified_file_path=""):
-    """
-    This function split a English paragraph into sentences
-    """
-    with open(file_path, "r") as fp:
-        for paragraph in fp:
-            paragraph = paragraph.split("।")
-            # for line in paragraph:
-            #     yield line
-
-    # Converting list to text file
-    with open(modified_file_path, "w") as new_file:
-        for listitem in paragraph:
-            new_file.write("%s\n" % listitem)
-
-
-# ======================================
 # Split English Paragraph
 # ======================================
 def split_paragraph(file_path="", modified_file_path=""):
@@ -266,29 +235,13 @@ def split_paragraph(file_path="", modified_file_path=""):
     This function split a English paragraph into sentences
     """
     with open(file_path, "r") as fp:
-        for paragraph in fp:
-            paragraph = paragraph.split(".")
-            # for line in paragraph:
-            #     yield line
+        data = fp.read()
+        mylist = nltk.sent_tokenize(data)
 
     # Converting list to text file
     with open(modified_file_path, "w") as new_file:
-        for listitem in paragraph:
+        for listitem in mylist:
             new_file.write("%s\n" % listitem)
-
-
-# ======================================
-# Split English Paragraph 2
-# ======================================
-def split_paragraph2(file_path=""):
-    """
-    This function split a English paragraph into sentences
-    """
-    with open(file_path, "r") as fp:
-        for paragraph in fp:
-            paragraph = paragraph.split(".")
-            for line in paragraph:
-                yield line
 
 
 # =====================================================

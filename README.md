@@ -2,8 +2,10 @@
     <img src="https://github.com/MusfiqDehan/data-preprocessors/raw/master/branding/logo.png">
 </h1>
 
+<!-- Badges -->
+
 [![](https://img.shields.io/pypi/v/data-preprocessors.svg)](https://pypi.org/project/data-preprocessors/)
-[![Downloads](https://static.pepy.tech/personalized-badge/data-preprocessors?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/data-preprocessors)
+[![Downloads](https://img.shields.io/pypi/dm/data-preprocessors)](https://pepy.tech/project/data-preprocessors)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mJuRfIz__uS3xoFaBsFn5mkLE418RU19?usp=sharing)
 [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb)
 
