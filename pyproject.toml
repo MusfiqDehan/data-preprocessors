@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "data-preprocessors"
-version = "0.17.0"
+version = "0.18.0"
 description = "An easy to use tool for Data Preprocessing specially for Text Preprocessing"
 license = "MIT"
 authors = ["Md. Musfiqur Rahaman <musfiqur.rahaman@northsouth.edu>"]
 readme = "README.md"
 homepage = "https://github.com/MusfiqDehan/data-preprocessors"
 repository = "https://github.com/MusfiqDehan/data-preprocessors"
-keywords = ["nlp", "data-preprocessors", "data-preprocessing", "text-preprocessing", "data-science"]
+keywords = ["nlp", "data-preprocessors", "data-preprocessing", "text-preprocessing", "data-science", "textfile", "musfiqdehan"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
