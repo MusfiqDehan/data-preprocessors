@@ -1,7 +1,8 @@
 """
 A module for preprocessing textfiles
 """
-
+from collections import Counter
+from bnlp import NLTKTokenizer
 import pandas as pd
 import random
 import re
@@ -9,9 +10,14 @@ import csv
 import os
 import fileinput
 import glob
-
 import nltk
-nltk.download("punkt")
+
+# Checking punkt downloaded or not
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    print("punkt not found. downloading...")
+    nltk.download('punkt')
 
 
 # ======================================
@@ -230,18 +236,82 @@ def text2df(myfile_path="", mydataframe=pd.DataFrame()) -> pd.DataFrame:
 # ======================================
 # Split English Paragraph
 # ======================================
-def split_paragraph(file_path="", modified_file_path=""):
+def split_paragraph_file(file_path="", modified_file_path=""):
     """
     This function split a English paragraph into sentences
     """
     with open(file_path, "r") as fp:
         data = fp.read()
-        mylist = nltk.sent_tokenize(data)
+        mylist = nltk.tokenize.sent_tokenize(data)
 
     # Converting list to text file
     with open(modified_file_path, "w") as new_file:
         for listitem in mylist:
             new_file.write("%s\n" % listitem)
+
+
+# ======================================
+# Split English Sentence
+# ======================================
+def split_paragraph(paragraph=""):
+    """
+    This function split a English Paragraph into sentences
+    """
+    sent_tokens = nltk.tokenize.sent_tokenize(paragraph)
+    return sent_tokens
+
+
+# ======================================
+# Split English Sentence
+# ======================================
+def split_sentence(sentence):
+    """
+    This function split a English Sentence into words
+    """
+    word_tokens = nltk.tokenize.word_tokenize(sentence)
+    return word_tokens
+
+
+# ======================================
+# Split Bangla Paragraph
+# ======================================
+def split_bangla_paragraph_file(file_path="", modified_file_path=""):
+    """
+    This function split a English paragraph into sentences
+    """
+    with open(file_path, "r") as fp:
+        data = fp.read()
+        bnltk = NLTKTokenizer()
+        mylist = bnltk.sentence_tokenize(data)
+
+    # Converting list to text file
+    with open(modified_file_path, "w") as new_file:
+        for listitem in mylist:
+            new_file.write("%s\n" % listitem)
+
+
+# ======================================
+# Split Bangla Paragraph
+# ======================================
+def split_bangla_paragraph(paragraph=""):
+    """
+    This function split a English Paragraph into sentences
+    """
+    bnltk = NLTKTokenizer()
+    sent_tokens = bnltk.sentence_tokenize(paragraph)
+    return sent_tokens
+
+
+# ======================================
+# Split Bangla Sentence
+# ======================================
+def split_bangla_sentence(sentence):
+    """
+    This function split a Bangla Sentence into words
+    """
+    bnltk = NLTKTokenizer()
+    word_tokens = bnltk.word_tokenize(sentence)
+    return word_tokens
 
 
 # =====================================================
@@ -271,13 +341,47 @@ def separate_lines(
 # ===================================
 def count_lines(file_path=""):
     """
-    Count total 
-    no of lines in a text file
+    Count total no of lines in a text file
     """
     with open(file_path, "r") as fp:
         for count, line in enumerate(fp):
             pass
     return count + 1
+
+
+# ========================================
+# Count total words in a sentence
+# ========================================
+def count_words(sentence):
+    """
+    Count total words in a sentence
+    """
+    return len(sentence.split())
+
+
+# ========================================
+# Count total unique words in a sentence
+# ========================================
+def count_unique_words(sentence: str) -> int:
+    """
+    Count total unique words in a sentence
+    """
+    unique_count = 0
+    for letter, count in Counter(sentence.split()).items():
+        if count == 1:
+            unique_count += 1
+
+    return unique_count
+
+
+# ========================================
+# Count total characters in a sentence
+# ========================================
+def count_chars(sentence):
+    """
+    Count total characters in a sentence
+    """
+    return len(sentence)
 
 
 # =====================================================
@@ -521,20 +625,6 @@ def merge_textfiles(folder_path="", combined_file_path=""):
         for file in file_list:
             with open(folder_path + file, "r") as myfile:
                 combined_file.write(myfile.read())
-
-
-# ========================================
-# Count total characters in a sentence
-# ========================================
-def count_chars(sentence):
-    """
-    Count total characters in a sentence
-    """
-    return len(sentence)
-    # total = 0
-    # for ch in sentence:
-    #     total += 1
-    # return total
 
 
 # ========================================
