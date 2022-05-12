@@ -23,7 +23,7 @@ except LookupError:
 # ======================================
 # Creating corpus on given format
 # ======================================
-def parallel_corpus_builder(src_file="", tgt_file="", separator="", src_tgt_file=""):
+def parallel_corpus_builder(src_file="", tgt_file="", separator="|||", src_tgt_file=""):
     """
     Build parallel corpus of two languages.
     """
@@ -37,8 +37,6 @@ def parallel_corpus_builder(src_file="", tgt_file="", separator="", src_tgt_file
 
     # Merging Bangla and English Data
     merge_list = zip(src_list, tgt_list)
-
-    separator = "|||"
 
     # Changing format of Bangla and English Data
     # chr(92) = '\'

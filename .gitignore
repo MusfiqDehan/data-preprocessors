@@ -1,3 +1,11 @@
+# Folders
+converters
+count_manager
+file_manager
+list_manager
+punc_manager
+tokenizers
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
