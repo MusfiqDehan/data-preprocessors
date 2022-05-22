@@ -23,32 +23,81 @@ except LookupError:
 # ======================================
 # Creating corpus on given format
 # ======================================
-def parallel_corpus_builder(src_file="", tgt_file="", separator="|||", src_tgt_file=""):
+def build_parallel_corpus(src_file="", tgt_file="", separator="|||", src_tgt_file=""):
     """
     Build parallel corpus of two languages.
     """
-    # Bangla File
-    with open(src_file, "r") as src_data:
-        src_list = [line.rstrip("\n") for line in src_data.readlines()]
+    src_list = text2list(myfile_path=src_file)
 
-    # English File
-    with open(tgt_file, "r") as tgt_data:
-        tgt_list = [line.rstrip("\n") for line in tgt_data.readlines()]
+    tgt_list = text2list(myfile_path=tgt_file)
 
-    # Merging Bangla and English Data
     merge_list = zip(src_list, tgt_list)
 
     # Changing format of Bangla and English Data
     # chr(92) = '\'
+    # chr(10) = '\n'
     src_tgt_list = [
-        f"{src_line.rstrip('chr(92)n')} {separator} {tgt_line.rstrip('chr(92)n')}"
+        f"{src_line.rstrip('chr(10)')} {separator} {tgt_line.rstrip('chr(10)')}"
         for src_line, tgt_line in merge_list
     ]
 
     # Converting list into text file
-    with open(src_tgt_file, "w") as src_tgt:
-        for item in src_tgt_list:
-            src_tgt.write(item + "\n")
+    list2text(mylist=src_tgt_list, myfile_path=src_tgt_file)
+
+
+# ======================================
+# Separating corpus on given format
+# ======================================
+def separate_parallel_corpus(src_tgt_file="", separator="|||", src_file="", tgt_file=""):
+    """
+    Separate parallel corpus of two languages.
+    """
+    mylist = text2list(
+        myfile_path=src_tgt_file,
+    )
+
+    for line in mylist:
+        src_line, tgt_line = line.split(separator)
+        with open(src_file, "a") as src_data:
+            src_data.write(src_line + "\n")
+        with open(tgt_file, "a") as tgt_data:
+            tgt_data.write(tgt_line + "\n")
+
+
+# ======================================
+# Convert excel file into multiple text files
+# ======================================
+def excel2multitext(excel_file_path="",
+                    column_names=None,
+                    src_file="",
+                    tgt_file="",
+                    aligns_file="",
+                    separator="|||",
+                    src_tgt_file="",
+                    ):
+    """
+    This function convert excel file into multiple text files
+    """
+    if column_names is None:
+        column_names = []
+
+    df = pd.read_excel(excel_file_path, header=None, names=column_names)
+    # df.to_csv(src_file, sep="\n", header=False, index=False)
+
+    src_list = list(df[column_names[0]])
+    tgt_list = list(df[column_names[1]])
+    aligns_list = list(df[column_names[2]])
+
+    list2text(mylist=src_list, myfile_path=src_file)
+    list2text(mylist=tgt_list, myfile_path=tgt_file)
+    list2text(mylist=aligns_list, myfile_path=aligns_file)
+
+    build_parallel_corpus(
+        src_file=src_file,
+        tgt_file=tgt_file,
+        separator=separator,
+        src_tgt_file=src_tgt_file
+    )
 
 
 # ======================================
@@ -522,7 +571,7 @@ def with_and_remove_punc(line):
 # =================================
 # Convert a text file into a list
 # =================================
-def text2list(myfile_path="", mylist=[]):
+def text2list(myfile_path=""):
     with open(myfile_path, "r") as myfile:
         mylist = [line.rstrip("\n") for line in myfile.readlines()]
     return mylist
@@ -566,7 +615,8 @@ def text_to_csv_with_header2(text_file_path="", csv_file_path="", delimeter='\n'
 
     # reading given csv file
     # and creating dataframe
-    mytext = pd.read_csv(text_file_path, delimiter=delimeter, header=None)
+
+    mytext = pd.read_csv(text_file_path, sep=delimeter, header=None)
 
     # adding column headings
     mytext.columns = header
@@ -638,7 +688,7 @@ def empty_function(no_args):
 def apply_whole(
     function_name, myfile_path="", modified_file_path=""
 ):
-    mylist = text2list(myfile_path=myfile_path, mylist=[])
+    mylist = text2list(myfile_path=myfile_path)
 
     # mylist = [function_name(item) for item in mylist]
     newlist = list(map(function_name, mylist))
