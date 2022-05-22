@@ -406,6 +406,13 @@ def count_words(sentence):
     return len(sentence.split())
 
 
+def count_bangla_words(sentence):
+    """
+    Count total Bangla words in a Bangla sentence
+    """
+    return len(split_bangla_sentence(sentence))
+
+
 # ========================================
 # Count total unique words in a sentence
 # ========================================
@@ -594,7 +601,7 @@ def text2csv(text_file_path="", csv_file_path=""):
         writer.writerows(mylist)
 
 
-def text_to_csv_with_header(text_file_path="", csv_file_path=""):
+def text2csv_with_header(text_file_path="", csv_file_path=""):
     """
     Convert a text file into a csv file with header/column names
     """
@@ -609,7 +616,7 @@ def text_to_csv_with_header(text_file_path="", csv_file_path=""):
         writer.writerows(mylist)
 
 
-def text_to_csv_with_header2(text_file_path="", csv_file_path="", delimeter='\n', header=None):
+def text2csv_with_header2(text_file_path="", csv_file_path="", delimeter='\n', header=None):
     if header is None:
         header = []
 
