@@ -20,6 +20,7 @@
     - [Split Textfile](#split-textfile)
     - [Parallel Corpus Builder](#split-textfile)
     - [Remove Punc](#split-textfile)
+    - [Space Punc](#split-textfile)
 
 ## **Installation**
 Install the latest stable release<br>
