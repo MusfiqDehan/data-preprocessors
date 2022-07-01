@@ -18,9 +18,9 @@
 - [Quick Start](#quick-start)
 - [Functions](#functions)
     - [Split Textfile](#split-textfile)
-    - [Parallel Corpus Builder](#split-textfile)
-    - [Remove Punc](#split-textfile)
-    - [Space Punc](#split-textfile)
+    - [Parallel Corpus Builder](#parallel-corpus-builder)
+    - [Remove Punc](#remove-punc)
+    - [Space Punc](#space-punc)
 
 ## **Installation**
 Install the latest stable release<br>
