@@ -1,6 +1,10 @@
-<h1>
-    <img src="https://github.com/MusfiqDehan/data-preprocessors/raw/master/branding/logo.png">
-</h1>
+<div align="center">
+    
+<img src="https://github.com/MusfiqDehan/data-preprocessors/raw/master/branding/logo.png">
+
+<p>Data Preprocessors</p>
+
+<sub>An easy to use tool for Data Preprocessing specially for Text Preprocessing</sub>
 
 <!-- Badges -->
 
@@ -9,9 +13,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1mJuRfIz__uS3xoFaBsFn5mkLE418RU19?usp=sharing)
 [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/kernels/welcome?src=https://github.com/keras-team/keras-io/blob/master/examples/vision/ipynb/mnist_convnet.ipynb)
 
-<p>
-    An easy to use tool for Data Preprocessing specially for Text Preprocessing
-</p>
+</div>
 
 ## **Table of Contents**
 - [Installation](#installation)
