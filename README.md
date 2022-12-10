@@ -27,10 +27,14 @@
 ## **Installation**
 Install the latest stable release<br>
 **For windows**<br>
-`$ pip install -U data-preprocessors`
+```
+pip install -U data-preprocessors
+```
 
 **For Linux/WSL2**<br>
-`$ pip3 install -U data-preprocessors`
+```
+pip3 install -U data-preprocessors
+```
 
 ## **Quick Start**
 ```python
