@@ -18,11 +18,14 @@
 ## **Table of Contents**
 - [Installation](#installation)
 - [Quick Start](#quick-start)
-- [Functions](#functions)
+- [Features](#features)
     - [Split Textfile](#split-textfile)
     - [Parallel Corpus Builder](#parallel-corpus-builder)
-    - [Remove Punc](#remove-punc)
-    - [Space Punc](#space-punc)
+    - [Remove Punctuation](#remove-punc)
+    - [Space Punctuation](#space-punc)
+    - [Space Punctuation](#space-punc)
+    - [Space Punctuation](#space-punc)
+    
 
 ## **Installation**
 Install the latest stable release<br>
@@ -47,7 +50,10 @@ print(sentence)
 ```
 
 ## **Functions**
+
 ### Split Textfile
+
+This function will split your textfile into train, test and validate. Three separate text files. By changing `shuffle` and `seed` value, you can randomly shuffle the lines of your text files.
 
 ```python
 from data_preprocessors import text_preprocessor as tp
