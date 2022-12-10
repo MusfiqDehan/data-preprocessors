@@ -22,6 +22,14 @@
 - [Features](#features)
     - [Split Textfile](#split-textfile)
     - [Parallel Corpus Builder](#parallel-corpus-builder)
+    - [Remove Punctuation](#remove-punctuation)
+        - [Apply in a Single Line]()
+        - [Apply in a Full Text File]()
+    - [Space Punctuation](#space-punctuation)
+        - [Apply in a Single Line]()
+        - [Apply in a Full Text File]()
+    - [Text File to List](#text-file-to-list)
+    - [List to Text File](#list-to-text-file)
 
     
 
