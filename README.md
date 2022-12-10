@@ -21,7 +21,8 @@
 - [Quick Start](#quick-start)
 - [Features](#features)
     - [Split Textfile](#split-textfile)
-    - [Parallel Corpus Builder](#parallel-corpus-builder)
+    - [Build Parallel Corpus](#build-parallel-corpus)
+    - [Separate Parallel Corpus](#)
     - [Remove Punctuation](#remove-punctuation)
         - [Apply in a Single Line]()
         - [Apply in a Full Text File]()
@@ -30,6 +31,10 @@
         - [Apply in a Full Text File]()
     - [Text File to List](#text-file-to-list)
     - [List to Text File](#list-to-text-file)
+    - [Count Characters of a Sentence](#)
+    - [Count Words of Sentence](#)
+    - [Count No of Lines in a Text File](#)
+    - **:star:[Apply Any Function in a Full Text File](#)**
 
     
 
