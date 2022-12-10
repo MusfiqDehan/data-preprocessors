@@ -16,15 +16,13 @@
 </div>
 
 ## **Table of Contents**
+
 - [Installation](#installation)
 - [Quick Start](#quick-start)
 - [Features](#features)
     - [Split Textfile](#split-textfile)
     - [Parallel Corpus Builder](#parallel-corpus-builder)
-    - [Remove Punctuation](#remove-punc)
-    - [Space Punctuation](#space-punc)
-    - [Space Punctuation](#space-punc)
-    - [Space Punctuation](#space-punc)
+
     
 
 ## **Installation**
@@ -40,6 +38,7 @@ pip3 install -U data-preprocessors
 ```
 
 ## **Quick Start**
+
 ```python
 from data_preprocessors import text_preprocessor as tp
 sentence = "bla! bla- ?bla ?bla."
@@ -73,5 +72,21 @@ tp.split_textfile(
 # Train set size:  300
 # Validation set size:  100
 # Test set size:  100
+```
+
+
+### Remove Punctuation
+
+#### From a Single Line
+
+By using this function, you will be able to remove the punction of a single line of a text file.
+
+```python
+from data_preprocessors import text_preprocessor as tp
+sentence = "bla! bla- ?bla ?bla."
+sentence = tp.remove_punc(sentence)
+print(sentence)
+
+# bla bla bla bla
 ```
 
