@@ -90,8 +90,6 @@ tp.split_textfile(
 
 ### Remove Punctuation
 
-#### From a Single Line
-
 By using this function, you will be able to remove the punction of a single line of a text file.
 
 ```python
