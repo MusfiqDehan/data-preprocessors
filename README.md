@@ -61,7 +61,7 @@ print(sentence)
 >> bla bla bla bla
 ```
 
-## **Functions**
+## **Features**
 
 ### Split Textfile
 
