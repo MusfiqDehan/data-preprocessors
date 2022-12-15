@@ -34,7 +34,7 @@
     - [Count Characters of a Sentence](#)
     - [Count Words of Sentence](#)
     - [Count No of Lines in a Text File](#)
-    - **:star:[Apply Any Function in a Full Text File](#)**
+    - **[Apply Any Function in a Full Text File](#)**
 
     
 
