@@ -101,3 +101,16 @@ print(sentence)
 # bla bla bla bla
 ```
 
+### Space Punctuation
+
+By using this function, you will be able to add one space to the both side of the punction so that it will easier to tokenize the sentence. This will apply on a single line of a text file. But if we want, we can use it in a full twxt file.
+
+```python
+from data_preprocessors import text_preprocessor as tp
+sentence = "bla! bla- ?bla ?bla."
+sentence = tp.space_punc(sentence)
+print(sentence)
+
+# bla bla bla bla
+```
+
