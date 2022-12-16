@@ -89,6 +89,8 @@ tp.split_textfile(
 
 ### Separate Parallel Corpus
 
+By using this function, you will be able to easily separate `src_tgt_file` into separated `src_file` and `tgt_file`.
+
 ```python
 from data_preprocessors import text_preprocessor as tp
 tp.separate_parallel_corpus(src_tgt_file="", separator="|||", src_file="", tgt_file="")
