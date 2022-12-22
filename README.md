@@ -124,3 +124,13 @@ print(sentence)
 
 ### Text File to List
 
+### Apply a function in whole text file
+
+```python
+apply_whole(
+    function_name, 
+    myfile_path="", 
+    modified_file_path=""
+)
+```
+
