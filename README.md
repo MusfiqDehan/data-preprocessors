@@ -126,6 +126,8 @@ print(sentence)
 
 ### Apply a function in whole text file
 
+In the place of `function_name` you can use any function and that function will be applied in the full/whole text file.
+
 ```python
 apply_whole(
     function_name, 
