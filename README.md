@@ -126,7 +126,7 @@ print(sentence)
 
 Convert any text file into list.
 
-```
+```python
  mylist= tp.text2list(myfile_path="myfile.txt")
 ```
 
@@ -135,10 +135,11 @@ Convert any text file into list.
 In the place of `function_name` you can use any function and that function will be applied in the full/whole text file.
 
 ```python
-apply_whole(
+from data_preprocessors import text_preprocessor as tp
+tp.apply_whole(
     function_name, 
-    myfile_path="", 
-    modified_file_path=""
+    myfile_path="myfile.txt", 
+    modified_file_path="modified_file.txt"
 )
 ```
 
