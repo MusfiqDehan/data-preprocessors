@@ -123,6 +123,9 @@ print(sentence)
 ```
 
 ### Text File to List
+
+Convert any text file into list.
+
 ```
  mylist= tp.text2list(myfile_path="myfile.txt")
 ```
