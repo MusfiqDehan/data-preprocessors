@@ -123,6 +123,9 @@ print(sentence)
 ```
 
 ### Text File to List
+```
+ mylist= tp.text2list(myfile_path="myfile.txt")
+```
 
 ### Apply a function in whole text file
 
