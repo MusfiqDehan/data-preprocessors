@@ -130,7 +130,8 @@ Convert any text file into list.
 ### List to Text File
 
 Convert any list into a text file (filename.txt)
-```
+
+```python
 tp.list2text(mylist=mylist, myfile_path="myfile.txt")
 ```
 
