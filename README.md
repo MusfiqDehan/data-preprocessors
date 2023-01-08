@@ -127,6 +127,13 @@ Convert any text file into list.
  mylist= tp.text2list(myfile_path="myfile.txt")
 ```
 
+### List to Text File
+
+Convert any list into a text file (filename.txt)
+```
+tp.list2text(mylist=mylist, myfile_path="myfile.txt")
+```
+
 ### Apply a function in whole text file
 
 In the place of `function_name` you can use any function and that function will be applied in the full/whole text file.
