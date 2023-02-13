@@ -137,6 +137,12 @@ Convert any list into a text file (filename.txt)
 tp.list2text(mylist=mylist, myfile_path="myfile.txt")
 ```
 
+### Count Characters of a Sentence
+
+```python
+tp.count_chars(myfile="file.txt")
+```
+
 ### Apply a function in whole text file
 
 In the place of `function_name` you can use any function and that function will be applied in the full/whole text file.
