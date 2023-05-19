@@ -85,7 +85,7 @@ def maxlength_idx(list):
 
 def minlength_idx(list):
     """
-    Return the index of the list with the minimum length.
+    Return the index of the list with the minimum-length.
     """
     list_len = [len(i) for i in list]
     return np.argmin(np.array(list_len))
