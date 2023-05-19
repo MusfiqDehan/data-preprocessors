@@ -1,8 +1,4 @@
-attrs @ file:///home/dehan/.cache/pypoetry/artifacts/9a/27/ab/6895b786f345452394b42c1fdbe863803d0396e675b632c01cb13cad92/attrs-21.4.0-py2.py3-none-any.whl
-more-itertools @ file:///home/dehan/.cache/pypoetry/artifacts/62/3d/33/5a8bb7d6560ecb8d24e4a729b3531da94e59535c990304fa6500d27689/more_itertools-8.8.0-py3-none-any.whl
-packaging @ file:///home/dehan/.cache/pypoetry/artifacts/7f/d5/4c/1d3c4776012fc0bbe1f86e69bde2c5e36d2d32caa2e4845ac1fc08ab3f/packaging-21.3-py3-none-any.whl
-pluggy @ file:///home/dehan/.cache/pypoetry/artifacts/9c/e5/0b/2d64d03361a081edeb5d2ec5f286ccf9719587781fbf6822e1b6384c27/pluggy-0.13.1-py2.py3-none-any.whl
-py @ file:///home/dehan/.cache/pypoetry/artifacts/ab/b4/c3/a3971fd0d6ab5a2e40a43ad7b809005422d7cf333f7be6ccdfe9002e1b/py-1.11.0-py2.py3-none-any.whl
-pyparsing @ file:///home/dehan/.cache/pypoetry/artifacts/91/2a/6d/42a0f15168f41bcd87d73fe4a52da47c7c913303cee6b916e279c5fd58/pyparsing-3.0.8-py3-none-any.whl
-pytest @ file:///home/dehan/.cache/pypoetry/artifacts/9d/40/6b/50d2cb06df545acea43c65379c5456f4fbc703115a703bc7cd433ddf70/pytest-5.4.3-py3-none-any.whl
-wcwidth @ file:///home/dehan/.cache/pypoetry/artifacts/36/68/e2/7232f431072d5e8aeec124120b9a1d095d45da10311d271fac10982473/wcwidth-0.2.5-py2.py3-none-any.whl
+bnlp-toolkit==3.1.2
+nltk==3.7
+pandas==1.3.0
+python>=3.7.1,<4.0
