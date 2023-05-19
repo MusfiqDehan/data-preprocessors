@@ -1,0 +1,54 @@
+name: Release
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: Set up Python
+              uses: actions/setup-python@v1
+              with:
+                  python-version: 3.x
+
+            - name: Install dependencies
+              run: pip3 install -r requirements.txt
+
+            - name: Get the current version
+              id: current-version
+              run: echo "::set-output name=version::$(python setup.py --version)"
+
+            - name: Check if the commit message matches the release pattern
+              run: |
+                  if [[ $(git log -1 --pretty=%B) != "Release v${{ steps.current-version.outputs.version }}" ]]; then
+                    echo "Commit message does not match the release pattern."
+                    exit 1
+                  fi
+
+            - name: Setup PyPI Package using poetry
+              run: |
+                  poetry build
+                  poetry config http-basic.pypi ${{ secrets.PYPI_USERNAME }} ${{ secrets.PYPI_PASSWORD }}
+                  poetry publish
+
+            - name: Create a new release
+              uses: CupOfTea696/gh-action-auto-release@v1.0.2
+              with:
+                  title: "Release $version"
+                  tag: "v$semver"
+                  draft: false
+                  regex: "/^Release #{semver}$/i"
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Upload to GitHub Packages using Docker
+              run: |
+                  docker build -t data-preprocessors .
+                  docker login docker.pkg.github.com -u musfiqdehan -p ${{ secrets.PACKAGE_MANAGEMENT }}
+                  docker tag data-preprocessors docker.pkg.github.com/musfiqdehan/data-preprocessors/data-preprocessors-image:v${{ steps.current-version.outputs.version }}
+                  docker push docker.pkg.github.com/musfiqdehan/data-preprocessors/data-preprocessors-image:v${{ steps.current-version.outputs.version }}
