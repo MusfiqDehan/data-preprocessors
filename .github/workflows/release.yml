@@ -17,7 +17,9 @@ jobs:
                   python-version: 3.x
 
             - name: Install dependencies
-              run: pip3 install -r requirements.txt
+              run: |
+                  pip3 install --upgrade pip
+                  pip3 install -r requirements.txt
 
             - name: Get the current version
               id: current-version
