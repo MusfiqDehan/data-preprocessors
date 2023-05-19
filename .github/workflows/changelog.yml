@@ -1,0 +1,40 @@
+name: Update Changelog
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    update-changelog:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Get the current version
+              id: current-version
+              run: echo "::set-output name=version::$(python setup.py --version)"
+
+            - name: Check if the commit message matches the release pattern
+              run: |
+                  if [[ $(git log -1 --pretty=%B) != "Update changelog for v${{ steps.current-version.outputs.version }}" ]]; then
+                    echo "Commit message does not match the release pattern."
+                    exit 1
+                  fi
+
+            - name: Update changelog
+              if: contains(github.event.head_commit.message, 'Update changelog for v${{ steps.current-version.outputs.version }}')
+              run: |
+                  PREVIOUS_VERSION=$(git tag -l --sort=-creatordate | head -n 1)
+                  CHANGES=$(git log --pretty="- %s" $PREVIOUS_VERSION..)
+                  echo "# v${{ steps.current-version.outputs.version }}" >> CHANGELOG.md
+                  echo "## Changes" >> CHANGELOG.md
+                  echo "$CHANGES" >> CHANGELOG.md
+                  git config user.email "musfiqur.rahaman@northsouth.edu"
+                  git config user.name "Md. Musfiqur Rahaman"
+                  git commit -am "Update CHANGELOG.md with latest version by GitHub Action"
+                  git push
