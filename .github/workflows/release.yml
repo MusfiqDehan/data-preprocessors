@@ -16,9 +16,6 @@ jobs:
               with:
                   python-version: 3.x
 
-            - name: Clear Poetry cache
-              run: poetry cache clear --all pypi
-
             - name: Install dependencies
               run: |
                   pip3 install --upgrade pip
