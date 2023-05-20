@@ -51,7 +51,6 @@ jobs:
 
             - name: Upload to GitHub Packages using Docker
               run: |
-                  pip3 install --upgrade pip
                   docker build -t data-preprocessors .
                   docker login docker.pkg.github.com -u musfiqdehan -p ${{ secrets.PACKAGE_MANAGEMENT }}
                   docker tag data-preprocessors docker.pkg.github.com/musfiqdehan/data-preprocessors/data-preprocessors-image:v${{ env.version }}
