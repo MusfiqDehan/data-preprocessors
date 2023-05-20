@@ -42,3 +42,6 @@
 -   Update changelog for v0.30.0
 -   Change gensim dependency
 -   Update dockerfile
+# v0.31.0
+## Changes
+- Update changelog for v0.31.0
