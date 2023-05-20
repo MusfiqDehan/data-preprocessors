@@ -17,3 +17,7 @@
 - Update changelog for v0.27.0
 - Change base docker image to 3.7.3-alpine
 - Change base docker image to 3.7-alpine
+# v0.28.0
+## Changes
+- Update changelog for v0.28.0
+- Update changelog for v0.28.0
