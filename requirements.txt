@@ -1,8 +1,8 @@
-# bnlp-toolkit
+bnlp-toolkit
 click 
 colorama
 cython
-# gensim
+gensim
 importlib-metadata
 joblib
 nltk 
