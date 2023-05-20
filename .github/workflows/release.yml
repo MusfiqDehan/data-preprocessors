@@ -19,7 +19,6 @@ jobs:
             - name: Install dependencies
               run: |
                   pip3 install --upgrade pip
-                  pip3 install numpy
                   pip3 install -r requirements.txt
 
             - name: Get the current version
