@@ -49,14 +49,17 @@
 
 -   Update changelog for v0.31.0
 
-# v0.32.0
+# 🔖 v0.32.0
 
 ## Changes
 
 -   Update changelog for v0.32.0
 -   Update Dockerfile for resolving dependency conflict
+
 # v0.33.0
+
 ## Changes
-- Update changelog for v0.33.0
-- Fixing dependency conflict of docker
-- Update requirements for pypi publish
+
+-   Update changelog for v0.33.0
+-   Fixing dependency conflict of docker
+-   Update requirements for pypi publish
