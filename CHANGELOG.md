@@ -35,13 +35,16 @@
 -   Update changelog for v0.29.0
 -   fixed gensim version 4.0.1
 
-# v0.30.0
+# 🔖 v0.30.0
 
 ## Changes
 
 -   Update changelog for v0.30.0
 -   Change gensim dependency
 -   Update dockerfile
+
 # v0.31.0
+
 ## Changes
-- Update changelog for v0.31.0
+
+-   Update changelog for v0.31.0
