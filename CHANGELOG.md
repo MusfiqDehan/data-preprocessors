@@ -21,13 +21,16 @@
 -   Change base docker image to 3.7.3-alpine
 -   Change base docker image to 3.7-alpine
 
-# v0.28.0
+# 🔖 v0.28.0
 
 ## Changes
 
 -   Update changelog for v0.28.0
 -   Update changelog for v0.28.0
+
 # v0.29.0
+
 ## Changes
-- Update changelog for v0.29.0
-- fixed gensim version 4.0.1
+
+-   Update changelog for v0.29.0
+-   fixed gensim version 4.0.1
