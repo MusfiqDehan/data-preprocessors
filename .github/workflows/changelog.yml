@@ -17,21 +17,21 @@ jobs:
 
             - name: Get the current version
               id: current-version
-              run: echo "::set-output name=version::$(python setup.py --version)"
+              run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
 
             - name: Check if the commit message matches the release pattern
               run: |
-                  if [[ $(git log -1 --pretty=%B) != "Update changelog for v${{ steps.current-version.outputs.version }}" ]]; then
+                  if [[ $(git log -1 --pretty=%B) != "Update changelog for v${{ env.version }}" ]]; then
                     echo "Commit message does not match the release pattern."
                     exit 1
                   fi
 
             - name: Update changelog
-              if: contains(github.event.head_commit.message, 'Update changelog for v${{ steps.current-version.outputs.version }}')
+              if: contains(github.event.head_commit.message, 'Update changelog for v${{ env.version }}')
               run: |
                   PREVIOUS_VERSION=$(git tag -l --sort=-creatordate | head -n 1)
                   CHANGES=$(git log --pretty="- %s" $PREVIOUS_VERSION..)
-                  echo "# v${{ steps.current-version.outputs.version }}" >> CHANGELOG.md
+                  echo "# v${{ env.version }}" >> CHANGELOG.md
                   echo "## Changes" >> CHANGELOG.md
                   echo "$CHANGES" >> CHANGELOG.md
                   git config user.email "musfiqur.rahaman@northsouth.edu"
