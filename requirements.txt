@@ -2,7 +2,7 @@ bnlp-toolkit
 click 
 colorama
 cython
-gensim==4.0.1
+gensim
 importlib-metadata
 joblib
 nltk 
