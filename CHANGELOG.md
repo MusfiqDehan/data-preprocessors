@@ -48,3 +48,7 @@
 ## Changes
 
 -   Update changelog for v0.31.0
+# v0.32.0
+## Changes
+- Update changelog for v0.32.0
+- Update Dockerfile for resolving dependency conflict
