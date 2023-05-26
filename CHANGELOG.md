@@ -63,3 +63,9 @@
 -   Update changelog for v0.33.0
 -   Fixing dependency conflict of docker
 -   Update requirements for pypi publish
+# v0.34.0
+## Changes
+- Update changelog for v0.34.0 (32b31f0)
+- Update version (c4aea91)
+- Update changelog for v0.34.0 (75483fb)
+- Changelog updated for accepting commit hashes (633d0e8)
