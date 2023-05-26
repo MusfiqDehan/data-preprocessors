@@ -9,6 +9,9 @@ jobs:
     update-changelog:
         runs-on: ubuntu-latest
 
+        env:
+            version:
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
@@ -30,7 +33,8 @@ jobs:
               if: contains(github.event.head_commit.message, 'Update changelog for v${{ env.version }}')
               run: |
                   PREVIOUS_VERSION=$(git tag -l --sort=-creatordate | head -n 1)
-                  CHANGES=$(git log --pretty="- %C(auto)%s ([commit link](https://github.com/MusfiqDehan/data-preprocessors/commit/%h))" $PREVIOUS_VERSION..)
+                  FULL_COMMIT_ID=$(git rev-parse %h)
+                  CHANGES=$(git log --pretty="- %s ($FULL_COMMIT_ID)" $PREVIOUS_VERSION..)
                   echo "# v${{ env.version }}" >> CHANGELOG.md
                   echo "## Changes" >> CHANGELOG.md
                   echo "$CHANGES" >> CHANGELOG.md
