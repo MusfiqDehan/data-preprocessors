@@ -30,7 +30,7 @@ jobs:
               if: contains(github.event.head_commit.message, 'Update changelog for v${{ env.version }}')
               run: |
                   PREVIOUS_VERSION=$(git tag -l --sort=-creatordate | head -n 1)
-                  CHANGES=$(git log --pretty="- %s" $PREVIOUS_VERSION..)
+                  CHANGES=$(git log --pretty="- %s (%h)" $PREVIOUS_VERSION..)
                   echo "# v${{ env.version }}" >> CHANGELOG.md
                   echo "## Changes" >> CHANGELOG.md
                   echo "$CHANGES" >> CHANGELOG.md
