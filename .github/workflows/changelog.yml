@@ -31,6 +31,7 @@ jobs:
               run: |
                   PREVIOUS_VERSION=$(git tag -l --sort=-creatordate | head -n 1)
                   CHANGES=$(git log --pretty="- %s (%h)" $PREVIOUS_VERSION..)
+                  git log --pretty="- %s ([%h](https://github.com/musfiqdehan/data-preprocessors/commit/%h))"
                   echo "# v${{ env.version }}" >> CHANGELOG.md
                   echo "## Changes" >> CHANGELOG.md
                   echo "$CHANGES" >> CHANGELOG.md
