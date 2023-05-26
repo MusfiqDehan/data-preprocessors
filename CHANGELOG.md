@@ -95,3 +95,14 @@
 -   Changelog Updated (f0dd83e30c151171ab98778d399faf10f831ae91)
 -   Update setup.py version (5e263e0f37cb3c9f3e07955e3a47957ddcbff597)
 -   Update version in init file (a24a43a97b9bc7acb18b75de5c42a345d7254325)
+# v0.37.0
+## Changes
+- Update changelog for v0.37.0 (3d7f4a9)
+- Update version (212b156)
+- Fixed confusing format (21da9a9)
+- Fix env warning (2421ba2)
+- Update CHANGELOG.md with latest version by GitHub Action (31c0782)
+- Update changelog for v0.36.0 (eab9c87)
+- Changelog Updated (f0dd83e)
+- Update setup.py version (5e263e0)
+- Update version in init file (a24a43a)
