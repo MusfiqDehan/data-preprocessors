@@ -72,20 +72,26 @@
 -   Update version (c4aea91)
 -   Update changelog for v0.34.0 (75483fb)
 -   Changelog updated for accepting commit hashes (633d0e8)
+
 # v0.35.0
+
 ## Changes
-- Update changelog for v0.35.0 (dc83cc5)
-- Update changelog.md (6889e84)
-- Update version (757616f)
-- changelog updated (eb210d1)
-- Update CHANGELOG.md with latest version by GitHub Action (edc8857)
-- Update changelog for v0.34.0 (32b31f0)
-- Update version (c4aea91)
-- Update changelog for v0.34.0 (75483fb)
-- Changelog updated for accepting commit hashes (633d0e8)
+
+-   Update changelog for v0.35.0 (dc83cc5)
+-   Update changelog.md (6889e84)
+-   Update version (757616f)
+-   changelog updated (eb210d1)
+-   Update CHANGELOG.md with latest version by GitHub Action (edc8857)
+-   Update changelog for v0.34.0 (32b31f0)
+-   Update version (c4aea91)
+-   Update changelog for v0.34.0 (75483fb)
+-   Changelog updated for accepting commit hashes (633d0e8)
+
 # v0.36.0
+
 ## Changes
-- Update changelog for v0.36.0 (eab9c873a464ab080a9895218d08ac0a097f38d1)
-- Changelog Updated (f0dd83e30c151171ab98778d399faf10f831ae91)
-- Update setup.py version (5e263e0f37cb3c9f3e07955e3a47957ddcbff597)
-- Update version in init file (a24a43a97b9bc7acb18b75de5c42a345d7254325)
+
+-   Update changelog for v0.36.0 (eab9c873a464ab080a9895218d08ac0a097f38d1)
+-   Changelog Updated (f0dd83e30c151171ab98778d399faf10f831ae91)
+-   Update setup.py version (5e263e0f37cb3c9f3e07955e3a47957ddcbff597)
+-   Update version in init file (a24a43a97b9bc7acb18b75de5c42a345d7254325)
