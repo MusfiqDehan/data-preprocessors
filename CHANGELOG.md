@@ -96,7 +96,7 @@
 -   Update setup.py version (5e263e0f37cb3c9f3e07955e3a47957ddcbff597)
 -   Update version in init file (a24a43a97b9bc7acb18b75de5c42a345d7254325)
 
-# v0.37.0
+# v0.38.0
 
 ## Changes
 
