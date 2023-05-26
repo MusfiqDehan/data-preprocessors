@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='data-preprocessors',
-    version='0.36.0',
+    version='0.37.0',
     author='Md. Musfiqur Rahaman',
     author_email='musfiqur.rahaman@northsouth.edu',
 )
