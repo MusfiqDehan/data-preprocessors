@@ -72,3 +72,14 @@
 -   Update version (c4aea91)
 -   Update changelog for v0.34.0 (75483fb)
 -   Changelog updated for accepting commit hashes (633d0e8)
+# v0.35.0
+## Changes
+- Update changelog for v0.35.0 (dc83cc5)
+- Update changelog.md (6889e84)
+- Update version (757616f)
+- changelog updated (eb210d1)
+- Update CHANGELOG.md with latest version by GitHub Action (edc8857)
+- Update changelog for v0.34.0 (32b31f0)
+- Update version (c4aea91)
+- Update changelog for v0.34.0 (75483fb)
+- Changelog updated for accepting commit hashes (633d0e8)
