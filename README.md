@@ -33,6 +33,7 @@
     - [Count Characters of a Sentence](#)
     - [Count Words of Sentence](#)
     - [Count No of Lines in a Text File](#)
+    - [Convert Excel to Multiple Text Files](#)
     - **[Apply Any Function in a Full Text File](#)**
 
     
