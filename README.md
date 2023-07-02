@@ -144,6 +144,12 @@ tp.list2text(mylist=mylist, myfile_path="myfile.txt")
 tp.count_chars(myfile="file.txt")
 ```
 
+### Convert Excel to Multiple Text Files
+
+```python
+tp.
+```
+
 ### Apply a function in whole text file
 
 In the place of `function_name` you can use any function and that function will be applied in the full/whole text file.
