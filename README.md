@@ -32,7 +32,7 @@
     - [List to Text File](#list-to-text-file)
     - [Count Characters of a Sentence](#)
     - [Count Words of Sentence](#count-characters-of-a-sentence)
-    - [Count No of Lines in a Text File](#)
+    - [Count No of Lines in a Text File](#count-no-of-lines-in-a-text-file)
     - [Convert Excel to Multiple Text Files](#convert-excel-to-multiple-text-files)
     - **[Apply Any Function in a Full Text File](#)**
 
