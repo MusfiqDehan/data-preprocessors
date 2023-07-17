@@ -147,7 +147,7 @@ tp.count_chars(myfile="file.txt")
 ### Convert Excel to Multiple Text Files
 
 ```python
-tp. excel2multitext(excel_file_path="",
+tp.excel2multitext(excel_file_path="",
                     column_names=None,
                     src_file="",
                     tgt_file="",
