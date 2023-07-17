@@ -30,7 +30,7 @@
     - [Space Punctuation](#space-punctuation)
     - [Text File to List](#text-file-to-list)
     - [List to Text File](#list-to-text-file)
-    - [Count Characters of a Sentence](#)
+    - [Count Characters of a Sentence](#count-characters-of-a-sentence)
     - [Count Words of Sentence](#count-characters-of-a-sentence)
     - [Count No of Lines in a Text File](#count-no-of-lines-in-a-text-file)
     - [Convert Excel to Multiple Text Files](#convert-excel-to-multiple-text-files)
