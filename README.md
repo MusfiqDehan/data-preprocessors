@@ -140,6 +140,8 @@ tp.list2text(mylist=mylist, myfile_path="myfile.txt")
 
 ### Count Characters of a Sentence
 
+This function will help to count the total characters of a sentence.
+
 ```python
 tp.count_chars(myfile="file.txt")
 ```
