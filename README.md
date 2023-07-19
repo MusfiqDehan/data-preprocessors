@@ -34,7 +34,7 @@
     - [Count Words of Sentence](#count-characters-of-a-sentence)
     - [Count No of Lines in a Text File](#count-no-of-lines-in-a-text-file)
     - [Convert Excel to Multiple Text Files](#convert-excel-to-multiple-text-files)
-    - **[Apply Any Function in a Full Text File](#apply-any-function-in-a-full-text-file)**
+    - **[Apply Any Function in a Full Text File](#apply-a-function-in-whole-text-file)**
 
     
 
