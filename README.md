@@ -4,7 +4,7 @@
 
 <p>Data Preprocessors</p>
 
-<sub>An easy to use tool for Data Preprocessing specially for Text Preprocessing</sub>
+<sub>An easy-to-use tool for Data Preprocessing especially for Text Preprocessing</sub>
 
 <!-- Badges -->
 
