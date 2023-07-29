@@ -29,6 +29,7 @@
     - [Remove Punctuation](#remove-punctuation)
     - [Space Punctuation](#space-punctuation)
     - [Text File to List](#text-file-to-list)
+    - [Text File to Dataframe](#text-file-to-dataframe)
     - [List to Text File](#list-to-text-file)
     - [Count Characters of a Sentence](#count-characters-of-a-sentence)
     - [Count Words of Sentence](#count-characters-of-a-sentence)
