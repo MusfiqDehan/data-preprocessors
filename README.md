@@ -25,7 +25,7 @@
 - [Features](#features)
     - [Split Textfile](#split-textfile)
     - [Build Parallel Corpus](#build-parallel-corpus)
-    - [Separate Parallel Corpus](#seperate-parallel-corpus)
+    - [Separate Parallel Corpus](#separate-parallel-corpus)
     - [Remove Punctuation](#remove-punctuation)
     - [Space Punctuation](#space-punctuation)
     - [Text File to List](#text-file-to-list)
