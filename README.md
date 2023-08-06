@@ -149,6 +149,8 @@ tp.count_chars(myfile="file.txt")
 
 ### Convert Excel to Multiple Text Files
 
+This function will help to Convert an Excel file's columns into multiple text files.
+
 ```python
 tp.excel2multitext(excel_file_path="",
                     column_names=None,
