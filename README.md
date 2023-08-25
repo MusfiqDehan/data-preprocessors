@@ -98,6 +98,12 @@ from data_preprocessors import text_preprocessor as tp
 tp.separate_parallel_corpus(src_tgt_file="", separator="|||", src_file="", tgt_file="")
 ```
 
+### Decontracting Words from Sentence
+
+```python
+tp.decontracting_words(sentence)
+```
+
 ### Remove Punctuation
 
 By using this function, you will be able to remove the punction of a single line of a text file.
