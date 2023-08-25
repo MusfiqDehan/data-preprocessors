@@ -26,7 +26,7 @@
     - [Split Textfile](#split-textfile)
     - [Build Parallel Corpus](#build-parallel-corpus)
     - [Separate Parallel Corpus](#separate-parallel-corpus)
-    - [Deconstruct Words of Sentence](#deconstruct-word-of-sentence)
+    - [Decontruct Words of Sentence](#deconstruct-word-of-sentence)
     - [Remove Punctuation](#remove-punctuation)
     - [Space Punctuation](#space-punctuation)
     - [Text File to List](#text-file-to-list)
