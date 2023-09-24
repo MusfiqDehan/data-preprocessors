@@ -32,6 +32,7 @@
     - [Text File to List](#text-file-to-list)
     - [Text File to Dataframe](#text-file-to-dataframe)
     - [List to Text File](#list-to-text-file)
+    - [Remove File](#remove-file)
     - [Count Characters of a Sentence](#count-characters-of-a-sentence)
     - [Count Words of Sentence](#count-characters-of-a-sentence)
     - [Count No of Lines in a Text File](#count-no-of-lines-in-a-text-file)
