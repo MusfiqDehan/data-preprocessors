@@ -129,3 +129,16 @@
 - Update TOC for Excel to text (db26feb)
 - feat[doc]: Add Convert Excel File to Multiple Text Files section (fa14d9d)
 - feat[doc]: Add Excel File to Multiple Text File (4c996df)
+# v0.40.0
+## Changes
+- Update changelog for v0.40.0 (66b8d35)
+- Update changelog for v0.40.0 (551dc54)
+- Update pyproject.toml version 0.40.0 (e3b30fb)
+- Update changelog.yml file (0eedbe6)
+- Update checkout version (d20adb6)
+- Add new Remove File in TOC (b8bb7b1)
+- Update decontracting function (f81dac8)
+- Update typo (7b6abe9)
+- Update CONTRIBUTING.md (174c1f6)
+- Add TOC for Deconstructing Words (7c3167b)
+- Create class_based_text_preprocessors.py (52bc17b)
