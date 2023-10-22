@@ -109,8 +109,11 @@
 -   Changelog Updated (f0dd83e)
 -   Update setup.py version (5e263e0)
 -   Update version in init file (a24a43a)
-# v0.39.0
+
+# 🔖 v0.39.0
+
 ## Changes
+
 - Update changelog for v0.39.0 (6ec92cb)
 - Update pyproject.toml (9e45c80)
 - Update description for excel to multitext (b1364e8)
