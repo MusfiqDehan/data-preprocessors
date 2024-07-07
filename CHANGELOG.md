@@ -1,5 +1,7 @@
 # v0.47.0
+
 ## Changes
+
 - Update changelog for v0.47.0 (a989881)
 - Update (5534906)
 - Update setup.py (9ea72b8)
