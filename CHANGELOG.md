@@ -150,6 +150,7 @@
 - Create class_based_text_preprocessors.py (52bc17b)
   
 # v0.41.0
+
 ## Changes
 - Update changelog for v0.41.0 (c654737)
 - Update changelog for v0.41.0 (d077c66)
