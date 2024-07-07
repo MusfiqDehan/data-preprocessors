@@ -52,6 +52,7 @@
 - Add a list to TOC (3f36b6d)
   
 # v0.47.0
+
 ## Changes
 - Update changelog for v0.47.0 (d4579b1)
 - Update changelog.yml (99ef296)
