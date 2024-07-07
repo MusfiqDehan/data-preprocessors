@@ -19,7 +19,7 @@ jobs:
         run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
 
       - name: Run Update Changelog Action
-        uses: musfiqdehan/auto-update-changelog@v1
+        uses: musfiqdehan/auto-update-changelog@v1.0.0
         with:
           version: ${{ env.version }}
         env:
