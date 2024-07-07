@@ -1,60 +1,32 @@
 name: Release
 
 on:
-    push:
-        branches:
-            - master
+  push:
+    branches:
+      - master
 
 jobs:
-    release:
-        runs-on: ubuntu-latest
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get the current version
+        id: current-version
+        run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Run Release Action
+        uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.0
+        with:
+          version: ${{ env.version }}
         env:
-            version:
-
-        steps:
-            - uses: actions/checkout@v4
-
-            - name: Set up Python
-              uses: actions/setup-python@v4
-              with:
-                  python-version: '3.9'
-
-            - name: Install dependencies
-              run: |
-                  pip3 install --upgrade pip
-                  pip3 install -r requirements.txt
-
-            - name: Get the current version
-              id: current-version
-              run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
-
-            - name: Check if the commit message matches the release pattern
-              run: |
-                  if [[ $(git log -1 --pretty=%B) != "Release v${{ env.version }}" ]]; then
-                    echo "Commit message does not match the release pattern."
-                    exit 1
-                  fi
-
-            - name: Setup PyPI Package using poetry
-              run: |
-                  curl -sSL https://install.python-poetry.org | python3 -
-                  poetry build
-                  poetry config http-basic.pypi ${{ secrets.PYPI_USERNAME }} ${{ secrets.PYPI_PASSWORD }}
-                  poetry publish
-
-            - name: Create a new release
-              uses: CupOfTea696/gh-action-auto-release@v1.0.2
-              with:
-                  title: "Release $version"
-                  tag: "v$semver"
-                  draft: false
-                  regex: "/^Release #{semver}$/i"
-              env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-            - name: Upload to GitHub Packages using Docker
-              run: |
-                  docker build -t data-preprocessors .
-                  docker login docker.pkg.github.com -u musfiqdehan -p ${{ secrets.PACKAGE_MANAGEMENT }}
-                  docker tag data-preprocessors docker.pkg.github.com/musfiqdehan/data-preprocessors/data-preprocessors-image:v${{ env.version }}
-                  docker push docker.pkg.github.com/musfiqdehan/data-preprocessors/data-preprocessors-image:v${{ env.version }}
+          PYPI_USERNAME: ${{ secrets.PYPI_USERNAME }}
+          PYPI_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: ${{ secrets.GITHUB_USERNAME }}
