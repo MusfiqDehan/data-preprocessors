@@ -19,11 +19,33 @@ jobs:
         id: current-version
         run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
         shell: bash
+        
+      - name: Check if version exists on PyPI
+        id: check-version
+        run: |
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://pypi.org/project/data-preprocessors/${{ env.version }}/)
+          if [ $response -eq 200 ]; then
+            echo "Version already exists on PyPI. Incrementing version..."
+            new_version=$(python -c "import re; v='${{ env.version }}'; parts = v.split('.'); parts[-1] = str(int(parts[-1]) + 1); print('.'.join(parts))")
+            echo "new_version=$new_version" >> $GITHUB_ENV
+          else
+            echo "Version does not exist. Using provided version."
+            echo "new_version=${{ env.version }}" >> $GITHUB_ENV
+          fi
+        shell: bash
+  
+      - name: Update version in setup.py if necessary
+        run: |
+          current_version=$(grep -oP "version='\K[^']+" setup.py)
+          if [[ "${{ env.new_version }}" != "${{ current_version }}" ]]; then
+            sed -i "s/version='${{ current_version }}'/version='${{ env.new_version }}'/g" setup.py
+          fi
+        shell: bash
 
       - name: Run Release Action
         uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.3
         with:
-          version: ${{ env.version }}
+          version: ${{ env.new_version }}
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub_password: ${{ secrets.DOCKERHUB_PASSWORD }}
