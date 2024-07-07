@@ -9,18 +9,9 @@ jobs:
   update-changelog:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Get the current version
-        id: current-version
-        run: echo "version=$(python setup.py --version)" >> $GITHUB_ENV
-
       - name: Run Update Changelog Action
-        uses: musfiqdehan/auto-update-changelog@v1.0.0
+        uses: MusfiqDehan/Auto-Update-CHANGELOG@v1.0.0
         with:
-          version: ${{ env.version }}
+          version: '0.41.0'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
