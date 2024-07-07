@@ -87,7 +87,7 @@
 -   Update changelog for v0.34.0 (75483fb)
 -   Changelog updated for accepting commit hashes (633d0e8)
 
-# v0.36.0
+# 🔖 v0.36.0
 
 ## Changes
 
