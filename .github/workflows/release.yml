@@ -21,11 +21,14 @@ jobs:
         shell: bash
 
       - name: Run Release Action
-        uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.2
+        uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.3
         with:
           version: ${{ env.version }}
           pypi_token: ${{ secrets.PYPI_API_TOKEN }}
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub_password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          docker_image_name: 'data-preprocessors-image'
           github_token: ${{ secrets.GITHUB_TOKEN }}
           the_github_username: ${{ secrets.THE_GITHUB_USERNAME }}
+          the_github_repo_name: 'data-preprocessors'
+
