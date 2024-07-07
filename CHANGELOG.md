@@ -108,6 +108,7 @@
 - Add a list to TOC (3f36b6d)
 
 # v0.48.0
+
 ## Changes
 - Update changelog for v0.48.0 (3b42569)
 - Update setup.py to 0.48.0 (afc5a4c)
