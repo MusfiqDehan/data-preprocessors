@@ -12,6 +12,6 @@ jobs:
       - name: Run Update Changelog Action
         uses: MusfiqDehan/Auto-Update-CHANGELOG@v1
         with:
-          version: '0.41.0'
+          version: '1.0.0'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
