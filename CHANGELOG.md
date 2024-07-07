@@ -106,6 +106,7 @@
 - Update changelog for v0.41.0 (4d7ab49)
 - Add Merge Multiple Text Files function (9b31f51)
 - Add a list to TOC (3f36b6d)
+
 # v0.48.0
 ## Changes
 - Update changelog for v0.48.0 (3b42569)
