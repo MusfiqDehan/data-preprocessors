@@ -1,6 +1,11 @@
-# v0.46.0
-
+# v0.47.0
 ## Changes
+- Update changelog for v0.47.0 (a989881)
+- Update (5534906)
+- Update setup.py (9ea72b8)
+- Release v0.46.0 (cff1cce)
+- Release v0.46.0 (62b9dbe)
+- Update CHANGELOG.md with latest version by GitHub Action (000fcac)
 - Update changelog for v0.46.0 (ee8df81)
 - Update setup.py 0.46.0 (b9ad370)
 - Release v0.45.0 (a438240)
