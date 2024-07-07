@@ -21,11 +21,10 @@ jobs:
         shell: bash
 
       - name: Run Release Action
-        uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.1
+        uses: MusfiqDehan/Auto-PyPI-GitHubPackage-Docker-Release@v1.0.2
         with:
           version: ${{ env.version }}
-          pypi_username: ${{ secrets.PYPI_USERNAME }}
-          pypi_password: ${{ secrets.PYPI_PASSWORD }}
+          pypi_token: ${{ secrets.PYPI_API_TOKEN }}
           dockerhub_username: ${{ secrets.DOCKERHUB_USERNAME }}
           dockerhub_password: ${{ secrets.DOCKERHUB_PASSWORD }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
