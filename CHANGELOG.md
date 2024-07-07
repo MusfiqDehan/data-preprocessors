@@ -132,6 +132,7 @@
 - Update TOC for Excel to text (db26feb)
 - feat[doc]: Add Convert Excel File to Multiple Text Files section (fa14d9d)
 - feat[doc]: Add Excel File to Multiple Text File (4c996df)
+  
 # 🔖 v0.40.0
 ## Changes
 - Update changelog for v0.40.0 (66b8d35)
