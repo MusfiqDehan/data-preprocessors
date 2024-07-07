@@ -134,7 +134,9 @@
 - feat[doc]: Add Excel File to Multiple Text File (4c996df)
   
 # 🔖 v0.40.0
+
 ## Changes
+
 - Update changelog for v0.40.0 (66b8d35)
 - Update changelog for v0.40.0 (551dc54)
 - Update pyproject.toml version 0.40.0 (e3b30fb)
