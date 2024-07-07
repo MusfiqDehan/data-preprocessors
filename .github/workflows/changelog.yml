@@ -23,5 +23,7 @@ jobs:
         uses: MusfiqDehan/Auto-Update-CHANGELOG@v1.0.2
         with:
           version: ${{ env.version }}
+          user_email: 'musfiqur.rahaman@northsouth.edu'
+          user_name: 'Md. Musfiqur Rahaman'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
