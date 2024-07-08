@@ -16,7 +16,7 @@
 - Update setup.py 0.45.0 (e2d0fe9)
 - Release v0.44.0 (61084e9)
 - Release 0.44.0 (aae00a4)
-- Update CHANGELOG.md with latest version by GitHub Action (d27e4fc)
+- Update .md with latest version by GitHub Action (d27e4fc)
 - Update changelog for v0.44.0 (6194c01)
 - Update setup.py 0.44.0 (6791eff)
 - Update release.yml (152d4b8)
