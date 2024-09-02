@@ -169,3 +169,16 @@
 - Update changelog for v0.41.0 (a481223)
 - Add Merge Multiple Text Files function (9b31f51)
 - Add a list to TOC (3f36b6d)
+# v0.58.0
+## Changes
+- Update changelog for v0.58.0 (db21c3e)
+- Release v0.42.0 (f127a91)
+- Update CHANGELOG.md with latest version by GitHub Action (c2c62ed)
+- Update changelog for v0.42.0 (966d430)
+- Release v0.41.0 (15373e9)
+- Release v0.41.0 (17e497f)
+- Release v0.41.0 (a946cde)
+- Update CHANGELOG.md with latest version by GitHub Action (161db1f)
+- Update changelog for v0.41.0 (a481223)
+- Add Merge Multiple Text Files function (9b31f51)
+- Add a list to TOC (3f36b6d)
