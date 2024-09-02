@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "data-preprocessors"
-version = "0.40.0"
+version = "0.41.0"
 description = "An easy to use tool for Data Preprocessing specially for Text Preprocessing"
 license = "MIT"
 authors = ["Md. Musfiqur Rahaman <musfiqur.rahaman@northsouth.edu>"]
