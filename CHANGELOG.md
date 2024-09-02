@@ -96,7 +96,7 @@
 - Update setup.py version (5e263e0f37cb3c9f3e07955e3a47957ddcbff597)
 - Update version in init file (a24a43a97b9bc7acb18b75de5c42a345d7254325)
 
-# v0.38.0
+# 🔖 v0.38.0
 
 ## Changes
 
@@ -156,8 +156,11 @@
 - Update changelog for v0.41.0 (a481223)
 - Add Merge Multiple Text Files function (9b31f51)
 - Add a list to TOC (3f36b6d)
+
 # v0.42.0
+
 ## Changes
+
 - Update changelog for v0.42.0 (966d430)
 - Release v0.41.0 (15373e9)
 - Release v0.41.0 (17e497f)
