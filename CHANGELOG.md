@@ -133,7 +133,7 @@
 - feat[doc]: Add Convert Excel File to Multiple Text Files section (fa14d9d)
 - feat[doc]: Add Excel File to Multiple Text File (4c996df)
 
-# v0.40.0
+# 🔖 v0.40.0
 
 ## Changes
 
@@ -169,8 +169,11 @@
 - Update changelog for v0.41.0 (a481223)
 - Add Merge Multiple Text Files function (9b31f51)
 - Add a list to TOC (3f36b6d)
+
 # v0.58.0
+
 ## Changes
+
 - Update changelog for v0.58.0 (db21c3e)
 - Release v0.42.0 (f127a91)
 - Update CHANGELOG.md with latest version by GitHub Action (c2c62ed)
