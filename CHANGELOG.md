@@ -145,3 +145,8 @@
 - Update CONTRIBUTING.md (174c1f6)
 - Add TOC for Deconstructing Words (7c3167b)
 - Create class_based_text_preprocessors.py (52bc17b)
+# v0.41.0
+## Changes
+- Update changelog for v0.41.0 (a481223)
+- Add Merge Multiple Text Files function (9b31f51)
+- Add a list to TOC (3f36b6d)
